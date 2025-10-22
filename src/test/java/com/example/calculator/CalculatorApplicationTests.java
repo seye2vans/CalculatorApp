@@ -1,13 +1,17 @@
 package com.example.calculator;
 
-import org.junit.jupiter.api.Test;
+import com.example.calculator.service.calculatorService;
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import static org.junit.Assert.assertEquals;
+
 @SpringBootTest
-class CalculatorApplicationTests {
+public class CalculatorApplicationTests {
 
+	private calculatorService calculator = new calculatorService();
 	@Test
-	void contextLoads() {
+	public void testSum() {
+		assertEquals(5, calculator.sum(2, 3));
 	}
-
 }
